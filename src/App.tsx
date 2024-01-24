@@ -1,11 +1,15 @@
 import './global.css'
 
-import { Header } from './components/header'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { RouterProvider } from 'react-router-dom'
+
+import { router } from './routes'
 
 export function App() {
   return (
-    <div className="">
-      <Header />
-    </div>
+    <HelmetProvider>
+      <Helmet titleTemplate="%s | TrimaxAI" />
+      <RouterProvider router={router} />
+    </HelmetProvider>
   )
 }
