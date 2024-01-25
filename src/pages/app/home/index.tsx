@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
+import { Card } from '@/components/card'
 import {
   Carousel,
   CarouselContent,
@@ -7,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import { Separator } from '@/components/ui/separator'
 
 export function Home() {
   return (
@@ -21,7 +23,7 @@ export function Home() {
         />
 
         <div className="flex flex-col justify-between">
-          <h1 className="text-2xl font-bold text-zinc-700">Main article</h1>
+          <h1 className="text-3xl font-bold text-zinc-700">Main article</h1>
 
           <p className="line-clamp-6 w-[522px] text-justify text-zinc-700">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus non,
@@ -55,57 +57,63 @@ export function Home() {
         </div>
       </div>
 
-      <div className="mt-24 flex h-64 flex-col items-center justify-center gap-3">
-        <h2 className="text-xl font-bold text-zinc-700">Conhecendo as IAs</h2>
+      <Separator
+        decorative={true}
+        className="-mx-16 my-10 w-screen bg-gradient-to-r from-cyan-100 to-blue-100"
+      />
+
+      <div className="flex flex-col items-center justify-center gap-10">
+        <h2 className="text-3xl font-bold text-zinc-700">Conhecendo as IAs</h2>
 
         <Carousel
           opts={{
             align: 'center',
           }}
-          className="flex w-full max-w-3xl items-center justify-center"
+          className="flex w-full items-center justify-center"
         >
-          <CarouselContent>
+          <CarouselContent className="flex max-w-5xl gap-4">
             <CarouselItem className="basis-1/2">
-              <div className="flex items-center justify-center">
-                <img
-                  className="rounded-sm"
-                  src="https://images.unsplash.com/photo-1682687219356-e820ca126c92?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
+              <Card
+                category="IA para o dia a dia"
+                title="Colors and AI"
+                image="https://images.unsplash.com/photo-1682686581660-3693f0c588d2?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nisi voluptatem sed accusantium laboriosam ducimus sequi fugit vero, impedit dolore mollitia eaque reprehenderit perferendis, maiores enim quasi repellendus. Eveniet, vitae."
+              />
             </CarouselItem>
             <CarouselItem className="basis-1/2">
-              <div className="flex items-center justify-center">
-                <img
-                  className="rounded-sm"
-                  src="https://images.unsplash.com/photo-1682687219356-e820ca126c92?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
+              <Card
+                category="IAs para perfis empresariais"
+                title="Colors and AI"
+                image="https://plus.unsplash.com/premium_photo-1706026427244-3b3df84382d8?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nisi voluptatem sed accusantium laboriosam ducimus sequi fugit vero, impedit dolore mollitia eaque reprehenderit perferendis, maiores enim quasi repellendus. Eveniet, vitae."
+              />
             </CarouselItem>
             <CarouselItem className="basis-1/2">
-              <div className="flex items-center justify-center">
-                <img
-                  className="rounded-sm"
-                  src="https://images.unsplash.com/photo-1682687219356-e820ca126c92?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
+              <Card
+                category="Deep learning"
+                title="Colors and AI"
+                image="https://images.unsplash.com/photo-1695273718260-cf359edd1b5d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nisi voluptatem sed accusantium laboriosam ducimus sequi fugit vero, impedit dolore mollitia eaque reprehenderit perferendis, maiores enim quasi repellendus. Eveniet, vitae."
+              />
             </CarouselItem>
             <CarouselItem className="basis-1/2">
-              <div className="flex items-center justify-center">
-                <img
-                  className="rounded-sm"
-                  src="https://images.unsplash.com/photo-1682687219356-e820ca126c92?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                />
-              </div>
+              <Card
+                category="IA para o dia a dia"
+                title="Colors and AI"
+                image="https://images.unsplash.com/photo-1705798543468-5b951da25e1e?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
+                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nisi voluptatem sed accusantium laboriosam ducimus sequi fugit vero, impedit dolore mollitia eaque reprehenderit perferendis, maiores enim quasi repellendus. Eveniet, vitae."
+              />
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
       </div>
+
+      <Separator
+        decorative={true}
+        className="-mx-16 my-20 w-screen bg-gradient-to-r from-cyan-100 to-blue-100"
+      />
     </>
   )
 }
